@@ -7,8 +7,10 @@
 <script>
 
 export default{
-  layout (context) {
-    return 'default'
+  head() {
+      return {
+        title: "Create Event"
+      };
   }
 }
 

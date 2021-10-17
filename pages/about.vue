@@ -1,14 +1,16 @@
 <template>
   <div>
-      Ressa
+    <h1>About</h1>
   </div>
 </template>
 
 <script>
 
 export default{
-  layout (context) {
-    return 'default'
+  head() {
+      return {
+        title: "About"
+      };
   }
 }
 
