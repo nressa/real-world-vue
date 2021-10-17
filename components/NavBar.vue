@@ -9,6 +9,9 @@
             </nuxt-link> |
             <nuxt-link to="/create" class="">
                 Create
+            </nuxt-link> |
+            <nuxt-link to="/about" class="">
+                About
             </nuxt-link>
         </nav>
     </div>

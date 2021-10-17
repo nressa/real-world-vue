@@ -1,11 +1,12 @@
 <template>
   <div class="">
     <navBar />
-    <Nuxt />
+    <div class="container">
+      <Nuxt />
+    </div>
   </div>
   
 </template>
-
 
 <script>
 import NavBar from '~/components/NavBar.vue'
@@ -17,3 +18,10 @@ export default {
 }
 
 </script>
+
+<style>
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+</style>
