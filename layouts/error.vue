@@ -2,8 +2,11 @@
   <div>
         <h1 v-if="error.statusCode === 404">{{ error.message }}</h1>
         <h1 v-else-if="error.statusCode === 500">{{ error.message }}</h1>
+        <h1 v-else-if="error.statusCode === 503">{{ error.message }}</h1>
         <h1 v-else>Something went wrong</h1>
-        <NuxtLink to="/">Dashboard</NuxtLink>
+        <nuxt-link to="/" class="">
+          Dashboard
+        </nuxt-link>
   </div>
 </template>
 
