@@ -7,8 +7,16 @@
 <script>
 export default {
   head() {
-      return {
-        title: "Event Blog"
-      };
+    return {
+      title: 'List',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 
+            'See all events!',
+        }
+      ]
+    }
   }}
 </script>
