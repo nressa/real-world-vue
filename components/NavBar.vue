@@ -7,7 +7,7 @@
             <nuxt-link to="/" class="">
                 List
             </nuxt-link> |
-            <nuxt-link to="/create" class="">
+            <nuxt-link to="/event/create" class="">
                 Create
             </nuxt-link> |
             <nuxt-link to="/about" class="">
