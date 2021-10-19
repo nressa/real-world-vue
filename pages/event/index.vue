@@ -1,22 +1,25 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>Event List</h1>
   </div>
 </template>
 
 <script>
-export default {
+
+export default{
   head() {
     return {
-      title: 'Home',
+      title: 'List',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content: 
-            'Create and see all of your team events!',
+            'Event list!',
         }
       ]
     }
-  }}
+  },
+}
+
 </script>
