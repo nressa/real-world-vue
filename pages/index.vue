@@ -11,20 +11,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import EventCard from '@/components/Event/Card.vue'
-import EventService from '@/services/EventService.js'
 
 export default {
   components: {
     EventCard
   },
-  async asyncData({ error }) {
+  async fetch({ store, error }) {
     try {
-      const { data } = await EventService.getEvents()
-      // merge data with component
-      return {
-        events: data 
-      }
+      await store.dispatch("events/fetchEvents");
 
     } catch (e) {
       error({
@@ -32,15 +28,14 @@ export default {
         message: 'Unable to fetch events at this time. Please try again.'
       })
     }
-
-
-
-
   },
   head() {
       return {
         title: 'Dashboard'
       }
-    },
+  },
+  computed: mapState({
+    events: state => state.events.events
+  }),
 }
 </script>
