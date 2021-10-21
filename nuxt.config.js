@@ -9,7 +9,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap' },
     ]
   },
 
@@ -20,6 +21,13 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
+
+  /**
+   * Progress bar color
+   */
+  loading: {
+    color: '#39b982'
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

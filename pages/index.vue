@@ -17,19 +17,23 @@ export default {
   components: {
     EventCard
   },
-  asyncData({ $axios, error }) {
-    return  $axios.get('http://localhost:4000/events')
-            .then(response => {
-                // merge data with component
-                return {
-                  events: response.data 
-                }
-            }).catch(e => {
-                error({ 
-                  statusCode: 503, 
-                  message: 'Unable to fetch events at this time. Please try again.' 
-                })
-            })
+  async asyncData({ $axios, error }) {
+    try {
+      const { data } = await  $axios.get('http://localhost:4000/events')
+                  // merge data with component
+                  return {
+                    events: data 
+                  }
+
+    } catch (e) {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch events at this time. Please try again.'
+      })
+    }
+
+
+
 
   },
   head() {
