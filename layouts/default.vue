@@ -33,6 +33,10 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+}
+
 .container {
   margin-left: 15%;
   margin-right: 15%;
