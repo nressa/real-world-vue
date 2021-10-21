@@ -11,19 +11,20 @@
 </template>
 
 <script>
-import EventCard from '~/components/Event/Card.vue'
+import EventCard from '@/components/Event/Card.vue'
+import EventService from '@/services/EventService.js'
 
 export default {
   components: {
     EventCard
   },
-  async asyncData({ $axios, error }) {
+  async asyncData({ error }) {
     try {
-      const { data } = await  $axios.get('http://localhost:4000/events')
-                  // merge data with component
-                  return {
-                    events: data 
-                  }
+      const { data } = await EventService.getEvents()
+      // merge data with component
+      return {
+        events: data 
+      }
 
     } catch (e) {
       error({
