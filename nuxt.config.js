@@ -22,6 +22,13 @@ export default {
   plugins: [
   ],
 
+  /**
+   * Progress bar color
+   */
+  loading: {
+    color: '#39b982'
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
