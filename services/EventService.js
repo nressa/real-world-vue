@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = `http://localhost:4000/events`;
+const baseUrl = `https://my-json-server.typicode.com/nressa/real-world-vue/events`;
 
 const config = {
     headers: {
