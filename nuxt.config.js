@@ -49,7 +49,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseUrl: 'http://localhost:4000/events', // Used as fallback if no runtime config is provided
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -60,5 +62,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // Env Configuration: https://nuxtjs.org/docs/configuration-glossary/configuration-env/
+  env: {
+    apiUrl: 'https://my-json-server.typicode.com/nressa/real-world-vue/events'
+  },
+
+  // Axios headers
+  config: {
+    Accept: 'application/json',
+    'Content-Type' : 'application/json'
   }
 }
