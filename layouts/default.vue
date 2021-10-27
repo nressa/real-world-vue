@@ -1,8 +1,10 @@
 <template>
-  <div class="">
+  <div>
     <navBar />
-    <div class="container">
-      <Nuxt />
+    <div class="d-flex">
+      <div class="container py-5">
+        <Nuxt />
+      </div>
     </div>
   </div>
   

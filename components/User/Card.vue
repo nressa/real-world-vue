@@ -1,11 +1,18 @@
 <template>
-    <div class="col-md-4">
-      <span class="eyebrow">
-        {{ user.name }}
-      </span>
-      <h4 class="title">
-        {{ user.position }}
-      </h4>
+    <div class="col-md-3 py-2">
+      <div class="card">
+        <div class="card-body">
+          <center>
+            <img :src="user.image" alt="" height="50" width="50" />
+            <h4 class="title">
+              {{ user.name }}
+            </h4>
+            <p>
+              {{ user.position }}
+            </p>
+          </center>
+        </div>
+      </div>
     </div>
 </template>
 <script>
