@@ -46,8 +46,10 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-  ],
 
+    // https://go.nuxtjs.dev/bootstrap
+    'bootstrap-vue/nuxt',
+  ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseUrl: 'http://localhost:4000/', // Used as fallback if no runtime config is provided
