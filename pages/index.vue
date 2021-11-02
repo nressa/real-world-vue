@@ -5,7 +5,7 @@
     <div class="row">
       <UserCard
         v-for="(user, index) in users"
-        :key="index"
+        :key="user.id"
         :user="user"
         :data-index="index"
       />
