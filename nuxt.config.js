@@ -52,7 +52,7 @@ export default {
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: 'http://localhost:4000/', // Used as fallback if no runtime config is provided
+    baseUrl: `https://my-json-server.typicode.com/nressa/real-world-vue/`, // Used as fallback if no runtime config is provided
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -68,7 +68,8 @@ export default {
 
   // Env Configuration: https://nuxtjs.org/docs/configuration-glossary/configuration-env/
   env: {
-    apiUrl: 'http://localhost:4000/'
+    baseUrl: 'http://localhost:4000/',
+    apiUrl: `https://my-json-server.typicode.com/nressa/real-world-vue/`,
   },
 
   // Axios headers
