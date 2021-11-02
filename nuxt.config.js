@@ -46,10 +46,14 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-  ],
 
+    // https://go.nuxtjs.dev/bootstrap
+    'bootstrap-vue/nuxt',
+  ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseUrl: 'http://localhost:4000/', // Used as fallback if no runtime config is provided
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -60,5 +64,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // Env Configuration: https://nuxtjs.org/docs/configuration-glossary/configuration-env/
+  env: {
+    apiUrl: 'http://localhost:4000/'
+  },
+
+  // Axios headers
+  config: {
+    Accept: 'application/json',
+    'Content-Type' : 'application/json'
   }
 }

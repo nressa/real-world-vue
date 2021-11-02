@@ -1,48 +1,25 @@
 <template>
-    <div class="nav">
-        <nuxt-link to="/" class="brand">
-            Real World Events
-        </nuxt-link>
-        <nav>
-            <nuxt-link to="/event" class="">
+<div>
+  <b-navbar toggleable="lg" type="dark" variant="info">
+    <nuxt-link to="/" class="navbar-brand">
+        Real World Events
+    </nuxt-link>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+            <nuxt-link to="/event" class="nav-link">
                 List
-            </nuxt-link> |
-            <nuxt-link to="/event/create" class="">
+            </nuxt-link> 
+            <nuxt-link to="/event/create" class="nav-link">
                 Create
-            </nuxt-link> |
-            <nuxt-link to="/about" class="">
+            </nuxt-link> 
+            <nuxt-link to="/about" class="nav-link">
                 About
             </nuxt-link>
-        </nav>
-    </div>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
 </template>
-
-<style scoped>
-.brand {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #39b982;
-  text-decoration: none;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-}
-.nav .nav-item {
-  box-sizing: border-box;
-  margin: 0 5px;
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-}
-.nav .nav-item.router-link-exact-active {
-  color: #39b982;
-  border-bottom: solid 2px #39b982;
-}
-
-.nav a {
-  display: inline-block;
-}
-</style>

@@ -1,22 +1,12 @@
 import axios from 'axios'
 
-const baseUrl = `https://my-json-server.typicode.com/nressa/real-world-vue/events`;
-
-const config = {
-    headers: {
-        Accept: 'application/json',
-        'Content-Type' : 'application/json'
-    }
-}
-
-
-
+const subject = 'events'
 
 export default {
     getEvents() {
-        return axios.get(baseUrl, config)
+        return axios.get(process.env.apiUrl + subject, process.config)
     },
     getEvent(id) {
-        return axios.get(baseUrl + '/' + id, config)
+        return axios.get(process.env.apiUrl + subject + '/' + id, process.config)
     }
 }
