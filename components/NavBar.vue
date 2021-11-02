@@ -1,7 +1,7 @@
 <template>
 <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <nuxt-link to="/" class="navbar-brand">
+    <nuxt-link to="/" class="navbar-brand container-fluid">
         Real World Events
     </nuxt-link>
 
